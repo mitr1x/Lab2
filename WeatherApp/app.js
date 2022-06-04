@@ -55,4 +55,4 @@ app.listen(process.env.PORT || 5000, () => {
     console.log("Listen port 3000");
 
 })
-
+app.use(express.static(__dirname + '/public'));
