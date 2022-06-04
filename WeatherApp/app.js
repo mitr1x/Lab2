@@ -3,7 +3,7 @@ const hbs = require("hbs");
 const fs = require('fs');
 
 const request = require('request');
-const apiKey = '899758bd068d693f89c18d6694531cfb';
+const apiKey = 'c83726334e442cc38f4846794db57e1f';
 
 let app = express();
 
@@ -36,7 +36,7 @@ app.get("/weather/:city", (req, res) => {
             res.render('weather', { weather: null, error: 'Error, try again' });
         } else {
             let weather = JSON.parse(body)
-
+            console.log(weather)
             if (weather.main == undefined) {
                 res.render('weather', { weather: null, error: 'Error, try again' });
             } else {
