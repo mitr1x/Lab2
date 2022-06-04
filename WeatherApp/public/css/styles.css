@@ -68,6 +68,10 @@ h2 small {
  }
 }
 
+.text-21{
+  color: white;
+}
+
 .button-21 {
   align-items: center;
   appearance: none;
@@ -111,6 +115,9 @@ h2 small {
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
 
+.text-65{
+  color: white;
+}
 .button-65 {
   appearance: none;
   backface-visibility: hidden;
