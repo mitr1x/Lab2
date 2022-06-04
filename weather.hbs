@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="WeatherApp\WeatherApp\views\styles.css" rel="stylesheet" type="text/css">
+    <title>Weather</title>
+</head>
+
+<body>
+    {{> header}}</br>
+
+    <div>
+        {{error}}
+    </div>
+
+    <ul>
+        {{#each weathers}}
+        <li>
+            <a href="/weather/{{city}}">{{city}}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <div class="container">
+        <h2>Погода в місті <small></small></h2>
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1">Місто</div>
+                    <div class="col col-2">Температура </div>
+                    <div class="col col-3">Тиск</div>
+                    <div class="col col-4">Вологість</div>
+                </li>
+    <li class="table-row">
+      <div class="col col-1">{{weather.name}}</div>
+      <div class="col col-2" > {{weather.main.temp}}</div>
+      <div class="col col-3" > {{weather.main.pressure}}</div>
+      <div class="col col-4" > {{weather.main.humidity}}</div>
+       </li>
+  </ul>
+</div>
+
+<!-- /.container -->
+   <!--  <div>
+
+        <p>City {{weather.name}}</p>
+        <p>Temperatyre {{weather.main.temp}}</p>
+        <p>Pressure {{weather.main.pressure}}</p>
+        <p>Humidity {{weather.main.humidity}}</p>
+    </div>
+-->
+
+    {{> footer}}
+</body>
+
+</html>
+
+
