@@ -15,11 +15,13 @@
     <div>
         {{error}}
     </div>
-
     <ul>
         {{#each weathers}}
         <li class="table-header">
-            <a href="/weather/{{city}}">{{city}}</a>
+            <button class="button-65" role="button"> 
+                <a href="/weather/{{city}}">{{city}}</a>
+            </button>
+           
         </li>
         {{/each}}
     </ul>
@@ -32,7 +34,7 @@
         <div class="col col-1" >{{weather.name}}</div>
     </li>
      <li class="table-header">
-      <div class="col col-3">Температура</div>
+      <div class="col col-3">Температура</div>8
             <div class="col col-2" >{{weather.main.temp}}</div>
     </li>
      <li class="table-header">
